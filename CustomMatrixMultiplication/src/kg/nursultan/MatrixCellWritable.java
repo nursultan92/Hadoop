@@ -14,11 +14,16 @@ public class MatrixCellWritable implements WritableComparable {
     public int rowIndex;
     public float value;
 
+    public MatrixCellWritable() {
+        this(0, 0, 0.f);
+    }
+
     public MatrixCellWritable(int rowIndex, int columnIndex, float value) {
         this.columnIndex = columnIndex;
         this.rowIndex = rowIndex;
         this.value = value;
     }
+
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
