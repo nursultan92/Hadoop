@@ -19,7 +19,7 @@ public class CustomReducer extends Reducer<Text, Text, Text, Text> {
                 hashB.put(Integer.parseInt(value[1]), Float.parseFloat(value[2]));
             }
         }
-        int n = 5; //Integer.parseInt(context.getConfiguration().get("n"));
+        int n = Integer.parseInt(context.getConfiguration().get("n")); //n 5
         float result = 0.0f;
         float a_ij;
         float b_jk;
